@@ -1,8 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
     jest: true,
+    browser: true,
   },
   extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
@@ -21,7 +21,8 @@ module.exports = {
   plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'react/jsx-one-expression-per-line': 'off',
